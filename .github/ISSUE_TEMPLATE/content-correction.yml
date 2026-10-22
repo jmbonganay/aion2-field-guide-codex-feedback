@@ -1,0 +1,47 @@
+name: Content correction
+description: Report an evidence-backed correction to an unofficial AION 2 Global guide.
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This report and its attachments are public. Omit passwords, account identifiers, personal contact information, payment details and private screenshots. Evidence is reviewed before a guide changes; there is no guaranteed response time.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or guide path
+      description: Include the claim ID if available.
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim and suggested correction
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Global region, faction and difficulty
+    validations:
+      required: true
+  - type: input
+    id: patch
+    attributes:
+      label: Patch or announcement context
+      description: Link an original notice or say unknown.
+    validations:
+      required: true
+  - type: input
+    id: observed
+    attributes:
+      label: Observed date and timezone
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and reproduction
+      description: Original source URL, timestamped observation or permitted screenshot. AI summaries alone are insufficient. Include conflicting evidence and repeatable steps where possible.
+    validations:
+      required: true
